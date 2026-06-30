@@ -12,10 +12,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.png", type: "image/png", sizes: "512x512" }
+      { url: "/favicon-mark.ico", sizes: "any" },
+      { url: "/icon-mark.png", type: "image/png", sizes: "512x512" }
     ],
-    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }]
+    apple: [{ url: "/apple-icon-mark.png", sizes: "180x180", type: "image/png" }]
   },
   openGraph: {
     title: "TJ Galenti | Baseball Biomechanics & Performance",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image-mark.png",
         width: 1200,
         height: 630,
         alt: "TJ Galenti biomechanics icon"
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "TJ Galenti | Baseball Biomechanics & Performance",
     description:
       "Dense baseball movement, mocap, hitting, pitching, and performance concepts explained visually and practically.",
-    images: ["/og-image.png"]
+    images: ["/og-image-mark.png"]
   }
 };
 
