@@ -63,21 +63,21 @@ function ContactIcon({ type }: { type: string }) {
 
 export default function WorkWithTJPage() {
   return (
-    <main className="bg-ivory pb-16 pt-8 sm:pb-20">
-      <section className="editorial-container overflow-hidden rounded-[38px] border border-stone/80 bg-paper p-3 shadow-soft">
+    <main className="bg-ivory pb-16 pt-5 sm:pb-20 sm:pt-8">
+      <section className="editorial-container overflow-hidden rounded-[24px] border border-stone/80 bg-paper p-2 shadow-soft sm:rounded-[38px] sm:p-3">
         <div className="grid gap-3 lg:grid-cols-[1.08fr_0.92fr]">
-          <div className="rounded-[32px] border border-stone/70 bg-ivory/82 p-7 sm:p-10 lg:p-12">
+          <div className="min-w-0 rounded-[20px] border border-stone/70 bg-ivory/82 p-5 sm:rounded-[32px] sm:p-10 lg:p-12">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-teal">Work With TJ</p>
-            <h1 className="mt-5 max-w-4xl font-serif text-6xl leading-[0.98] text-ink text-balance sm:text-8xl">
+            <h1 className="mt-4 max-w-4xl break-words font-serif text-[clamp(2.35rem,11vw,3.75rem)] leading-[0.98] text-ink text-balance sm:mt-5 sm:text-8xl">
               Start the conversation.
             </h1>
-            <p className="mt-7 max-w-2xl text-xl leading-8 text-charcoal/78">
+            <p className="mt-5 max-w-2xl text-base leading-7 text-charcoal/78 sm:mt-7 sm:text-xl sm:leading-8">
               For athletes, coaches, parents, teams, and organizations looking for help with baseball performance,
               biomechanics, mocap, analytics, or training decisions.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-wrap gap-2 sm:mt-8 sm:gap-3">
               {focusAreas.map((area) => (
-                <span key={area} className="rounded-full border border-stone bg-paper px-4 py-2 text-sm font-semibold text-charcoal/78">
+                <span key={area} className="rounded-full border border-stone bg-paper px-3 py-1.5 text-xs font-semibold text-charcoal/78 sm:px-4 sm:py-2 sm:text-sm">
                   {area}
                 </span>
               ))}
@@ -91,9 +91,9 @@ export default function WorkWithTJPage() {
                 href={item.href}
                 target={item.href.startsWith("http") ? "_blank" : undefined}
                 rel={item.href.startsWith("http") ? "noreferrer" : undefined}
-                className="focus-ring group flex items-center gap-4 rounded-[30px] border border-stone/70 bg-ivory p-5 transition duration-200 hover:-translate-y-0.5 hover:border-teal hover:bg-paper"
+                className="focus-ring group flex min-w-0 items-center gap-3 rounded-[20px] border border-stone/70 bg-ivory p-4 transition duration-200 hover:-translate-y-0.5 hover:border-teal hover:bg-paper sm:gap-4 sm:rounded-[30px] sm:p-5"
               >
-                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-navy text-ivory transition group-hover:bg-clay">
+                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-navy text-ivory transition group-hover:bg-clay sm:h-12 sm:w-12">
                   <ContactIcon type={item.icon} />
                 </span>
                 <span className="min-w-0">

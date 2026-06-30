@@ -26,22 +26,28 @@ function updateScrollState(container: HTMLDivElement | null) {
 function RailArrow({
   direction,
   onClick,
-  visible
+  visible,
+  variant = "overlay"
 }: {
   direction: "left" | "right";
   onClick: () => void;
   visible: boolean;
+  variant?: "overlay" | "inline";
 }) {
   const label = direction === "left" ? "Show earlier articles" : "Show more articles";
+  const positionClass =
+    variant === "overlay"
+      ? `absolute top-1/2 z-20 hidden -translate-y-1/2 sm:flex ${direction === "left" ? "left-2" : "right-2"}`
+      : "relative flex";
 
   return (
     <button
       type="button"
       aria-label={label}
       onClick={onClick}
-      className={`focus-ring absolute top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-stone bg-ivory/95 text-lg text-ink shadow-[0_8px_24px_rgba(17,17,17,0.08)] transition duration-200 hover:border-clay hover:text-clay ${
-        direction === "left" ? "left-1 sm:left-2" : "right-1 sm:right-2"
-      } ${visible ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
+      className={`focus-ring ${positionClass} h-10 w-10 items-center justify-center rounded-full border border-stone bg-ivory/95 text-lg text-ink shadow-[0_8px_24px_rgba(17,17,17,0.08)] transition duration-200 hover:border-clay hover:text-clay ${
+        visible ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+      }`}
     >
       <span aria-hidden>{direction === "left" ? "←" : "→"}</span>
     </button>
@@ -93,15 +99,20 @@ export function RecentArticlesScrollRail({ articles }: RecentArticlesScrollRailP
 
   return (
     <div className="relative mt-5 sm:mt-6">
+      <div className="mb-3 flex justify-end gap-2 sm:hidden">
+        <RailArrow direction="left" variant="inline" visible={canScrollLeft} onClick={() => scrollByCards("left")} />
+        <RailArrow direction="right" variant="inline" visible={canScrollRight} onClick={() => scrollByCards("right")} />
+      </div>
+
       <div
         aria-hidden
-        className={`pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-ivory to-transparent transition-opacity duration-200 sm:w-14 ${
+        className={`pointer-events-none absolute inset-y-0 left-0 z-10 hidden w-10 bg-gradient-to-r from-ivory to-transparent transition-opacity duration-200 sm:block sm:w-14 ${
           canScrollLeft ? "opacity-100" : "opacity-0"
         }`}
       />
       <div
         aria-hidden
-        className={`pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-ivory to-transparent transition-opacity duration-200 sm:w-16 ${
+        className={`pointer-events-none absolute inset-y-0 right-0 z-10 hidden w-12 bg-gradient-to-l from-ivory to-transparent transition-opacity duration-200 sm:block sm:w-16 ${
           canScrollRight ? "opacity-100" : "opacity-0"
         }`}
       />
