@@ -10,7 +10,7 @@ function ChevronIcon({ open }: { open: boolean }) {
     <svg
       aria-hidden
       viewBox="0 0 20 20"
-      className={`h-5 w-5 shrink-0 text-charcoal/50 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+      className={`h-5 w-5 shrink-0 text-charcoal/70 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
       fill="none"
       stroke="currentColor"
       strokeWidth="1.75"
@@ -127,18 +127,18 @@ export function ArticleMobileToc({
 
       {!dismissed && (
         <div ref={barRef} className={`sticky top-[4.5rem] z-30 mb-8 w-full max-w-full min-w-0 relative ${visibilityClass}`}>
-          <div className="overflow-hidden rounded-lg border border-stone bg-ivory/95 shadow-[0_8px_30px_rgba(17,17,17,0.06)] backdrop-blur">
+          <div className="overflow-hidden rounded-lg border border-stone bg-paper shadow-[0_12px_34px_rgba(17,17,17,0.1)]">
             <div className="flex min-w-0 items-stretch">
               <button
                 type="button"
                 aria-expanded={open}
                 aria-controls="article-mobile-toc"
                 onClick={() => setOpen((current) => !current)}
-                className="focus-ring flex min-w-0 flex-1 items-center justify-between gap-3 px-4 py-3.5 text-left"
+                className="focus-ring flex min-w-0 flex-1 items-center justify-between gap-3 px-4 py-3 text-left"
               >
                 <div className="min-w-0">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-teal">In this article</p>
-                  <p className="mt-1 truncate font-serif text-[1.05rem] leading-snug text-ink">{activeHeading.text}</p>
+                  <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-teal">In this article</p>
+                  <p className="mt-1 truncate font-serif text-[1.08rem] font-medium leading-snug text-ink">{activeHeading.text}</p>
                 </div>
                 <ChevronIcon open={open} />
               </button>
@@ -151,7 +151,7 @@ export function ArticleMobileToc({
                     setOpen(false);
                     setDismissed(true);
                   }}
-                  className="focus-ring shrink-0 border-l border-stone px-3.5 text-charcoal/55 transition hover:bg-paper hover:text-ink"
+                  className="focus-ring shrink-0 border-l border-stone px-3.5 text-charcoal/70 transition hover:bg-ivory hover:text-ink"
                 >
                   <CloseIcon />
                 </button>
@@ -164,9 +164,9 @@ export function ArticleMobileToc({
               ref={panelRef}
               id="article-mobile-toc"
               aria-label="Article table of contents"
-              className="absolute inset-x-0 top-[calc(100%+0.5rem)] z-40 max-w-full overflow-hidden rounded-lg border border-stone bg-paper shadow-[0_16px_48px_rgba(17,17,17,0.14)]"
+              className="absolute inset-x-0 top-[calc(100%+0.5rem)] z-40 max-w-full overflow-hidden rounded-lg border border-stone bg-ivory shadow-[0_18px_52px_rgba(17,17,17,0.16)]"
             >
-              <ol className="max-h-[min(52vh,360px)] overflow-y-auto py-2">
+              <ol className="max-h-[min(58vh,420px)] overflow-y-auto p-2">
                 {headings.map((heading) => {
                   const isActive = heading.id === activeId;
                   return (
@@ -174,9 +174,13 @@ export function ArticleMobileToc({
                       <a
                         href={`#${heading.id}`}
                         onClick={() => setOpen(false)}
-                        className={`focus-ring block rounded-md px-4 py-2.5 text-sm leading-snug transition ${
-                          heading.level === 3 ? "pl-8" : ""
-                        } ${isActive ? "bg-ivory font-semibold text-ink" : "text-charcoal/72 hover:bg-ivory hover:text-ink"}`}
+                        className={`focus-ring block rounded-md border-l-2 px-4 py-3 text-base leading-snug transition ${
+                          heading.level === 3 ? "pl-7" : ""
+                        } ${
+                          isActive
+                            ? "border-teal bg-paper font-semibold text-ink"
+                            : "border-transparent text-charcoal/85 hover:border-stone hover:bg-paper hover:text-ink"
+                        }`}
                       >
                         {heading.text}
                       </a>
