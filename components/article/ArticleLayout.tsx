@@ -14,7 +14,7 @@ export function ArticleLayout({ blocks, viewport }: Props) {
   if (!viewport) {
     return (
       <section className="editorial-container grid gap-10 py-12 lg:grid-cols-[minmax(0,760px)_280px] lg:items-start">
-        <article>
+        <article className="min-w-0 w-full">
           <ArticleMobileToc blocks={blocks} />
           <ArticleRenderer blocks={blocks} />
           <ArticleFooterCta />
@@ -27,7 +27,7 @@ export function ArticleLayout({ blocks, viewport }: Props) {
   if (viewport === "desktop") {
     return (
       <section className="editorial-container grid grid-cols-[minmax(0,760px)_280px] items-start gap-10 py-12">
-        <article>
+        <article className="min-w-0 w-full">
           <ArticleRenderer blocks={blocks} />
         </article>
         <ArticleSidebar blocks={blocks} viewport={viewport} />
@@ -37,7 +37,7 @@ export function ArticleLayout({ blocks, viewport }: Props) {
 
   return (
     <section className="w-full px-4 py-10">
-      <article className="mx-auto w-full">
+      <article className="mx-auto w-full min-w-0">
         <ArticleMobileToc blocks={blocks} viewport={viewport} />
         <ArticleRenderer blocks={blocks} />
         <ArticleFooterCta viewport={viewport} />
