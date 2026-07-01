@@ -14,7 +14,7 @@ export function ArticleSidebarContact() {
       <div className="mt-4 flex flex-col gap-2">
         <Link
           className="focus-ring rounded-full bg-ink px-4 py-2.5 text-center text-sm font-semibold text-ivory transition hover:bg-clay"
-          href="/work-with-tj"
+          href="/connect"
         >
           Get in touch
         </Link>

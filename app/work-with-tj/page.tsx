@@ -3,9 +3,9 @@ import { WorkInquiryForm } from "@/components/WorkInquiryForm";
 import { SITE_CONTACT_LINKS, SERVICE_FOCUS_TAGS } from "@/lib/site-copy";
 
 export const metadata: Metadata = {
-  title: "Work With TJ",
+  title: "Connect",
   description:
-    "Contact TJ Galenti for baseball performance, biomechanics, mocap, analytics, training, pitching, and hitting support."
+    "Contact TJ Galenti for baseball performance, biomechanics, motion capture, analytics, training, pitching, and hitting support."
 };
 
 const contactLinks = SITE_CONTACT_LINKS.map((link) => ({
@@ -49,13 +49,13 @@ export default function WorkWithTJPage() {
       <section className="editorial-container overflow-hidden rounded-[24px] border border-stone/80 bg-paper p-2 shadow-soft sm:rounded-[38px] sm:p-3">
         <div className="grid gap-3 lg:grid-cols-[1.08fr_0.92fr]">
           <div className="min-w-0 rounded-[20px] border border-stone/70 bg-ivory/82 p-5 sm:rounded-[32px] sm:p-10 lg:p-12">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-teal">Work With TJ</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-teal">Connect</p>
             <h1 className="mt-4 max-w-4xl break-words font-serif text-[clamp(2.35rem,11vw,3.75rem)] leading-[0.98] text-ink text-balance sm:mt-5 sm:text-8xl">
-              Start the conversation.
+              Inquiries
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-charcoal/78 sm:mt-7 sm:text-xl sm:leading-8">
-              For athletes, coaches, parents, teams, and organizations looking for help with baseball performance,
-              biomechanics, mocap, analytics, or training decisions.
+              For athletes, coaches, parents, teams, and organizations interested in baseball performance, biomechanics,
+              motion capture, consulting, applied data, or player development.
             </p>
             <div className="mt-6 flex flex-wrap gap-2 sm:mt-8 sm:gap-3">
               {focusAreas.map((area) => (

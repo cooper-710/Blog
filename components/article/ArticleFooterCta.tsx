@@ -23,7 +23,7 @@ export function ArticleFooterCta({ viewport }: { viewport?: PreviewViewport } = 
           </p>
         </div>
         <div className="flex flex-wrap gap-3">
-          <Link className="focus-ring rounded-full bg-ink px-5 py-3 text-sm font-semibold text-ivory transition hover:bg-clay" href="/work-with-tj">
+          <Link className="focus-ring rounded-full bg-ink px-5 py-3 text-sm font-semibold text-ivory transition hover:bg-clay" href="/connect">
             Get in touch
           </Link>
           <a className="focus-ring rounded-full border border-stone px-5 py-3 text-sm font-semibold text-ink transition hover:border-teal" href={sequenceUrl}>

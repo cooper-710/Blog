@@ -46,7 +46,7 @@ export function ArticlesExplorer({ articles, initialCategory = "All" }: Articles
             id="article-search"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
-            placeholder="Search titles, mocap, biomechanics, tags..."
+            placeholder="Search titles, motion capture, biomechanics, tags..."
             className="focus-ring w-full rounded-full border border-stone bg-paper py-3 pl-11 pr-11 text-base text-ink placeholder:text-charcoal/45"
           />
           {query && (

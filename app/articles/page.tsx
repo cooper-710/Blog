@@ -8,7 +8,7 @@ import { categories } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Articles",
   description:
-    "Baseball biomechanics, mocap, hitting, pitching, training, technology, and case study articles from TJ Galenti."
+    "Baseball biomechanics, motion capture, hitting, pitching, training, technology, and case study articles from TJ Galenti."
 };
 
 type Props = {

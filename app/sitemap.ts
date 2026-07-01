@@ -19,7 +19,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date()
     },
     {
-      url: `${baseUrl}/work-with-tj`,
+      url: `${baseUrl}/connect`,
       lastModified: new Date()
     },
     ...articles.map((article) => ({

@@ -19,7 +19,7 @@ type FormValues = typeof initialValues;
 
 function formatBody(values: FormValues) {
   return [
-    "Work With TJ Inquiry",
+    "Connect Inquiry",
     "",
     `Name: ${values.name}`,
     `Email: ${values.email}`,
@@ -40,7 +40,7 @@ export function WorkInquiryForm() {
 
   const mailtoHref = useMemo(() => {
     const subjectName = values.name.trim() || "New Inquiry";
-    const subject = `Work With TJ inquiry from ${subjectName}`;
+    const subject = `Connect inquiry from ${subjectName}`;
     return `mailto:${SITE_CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(formatBody(values))}`;
   }, [values]);
 
@@ -148,7 +148,7 @@ export function WorkInquiryForm() {
               <option>Throwing</option>
               <option>Strength / Training</option>
               <option>Biomechanics Assessment</option>
-              <option>Mocap</option>
+              <option>Motion capture</option>
               <option>Team Consulting</option>
             </select>
           </label>

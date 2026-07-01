@@ -6,7 +6,7 @@ import { SERVICE_TOPICS_LINE } from "@/lib/site-copy";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "About TJ Galenti, baseball biomechanist, mocap specialist, data scientist, CSCS, performance coach, former Division 1 player, PhD student in Biomedical Engineering, and CEO of Sequence Biolab."
+    "About TJ Galenti, baseball biomechanist, motion capture specialist, data scientist, CSCS, performance coach, former Division 1 player, PhD student in Biomedical Engineering, and CEO of Sequence Biolab."
 };
 
 const credentials = [
@@ -70,7 +70,7 @@ export default function AboutPage() {
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-teal">The Work</p>
           <div className="mt-5 space-y-6 text-lg leading-8 text-charcoal/82">
             <p>
-              My work is built around mocap, applied data science, and in-person coaching. I use biomechanical
+              My work is built around motion capture, applied data science, and in-person coaching. I use biomechanical
               assessments, movement screens, swing and throwing data, strength and training context, and on-field work
               to understand what is driving a player&apos;s performance.
             </p>
@@ -95,7 +95,7 @@ export default function AboutPage() {
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-teal">Why</p>
           <div className="mx-auto mt-5 max-w-3xl space-y-6">
             <p className="text-xl leading-8 text-charcoal/84">
-              I write these articles to share complex concepts in baseball biomechanics, mocap, training,
+              I write these articles to share complex concepts in baseball biomechanics, motion capture, training,
               player development, hitting, pitching, and applied data with the depth they deserve.
             </p>
             <p className="text-lg leading-8 text-charcoal/80">
@@ -131,7 +131,7 @@ export default function AboutPage() {
             </div>
             <Link
               className="focus-ring inline-flex w-fit rounded-full bg-ivory px-6 py-3 text-sm font-semibold text-ink transition duration-200 hover:-translate-y-0.5 hover:bg-clay hover:text-ivory"
-              href="/work-with-tj"
+              href="/connect"
             >
               Connect
             </Link>

@@ -10,23 +10,29 @@ const credentials = [
   "Biomechanist",
   "Data Scientist",
   "CSCS",
-  "Baseball Performance Coach",
-  "Former Division 1 Baseball Player",
-  "Pursuing PhD in Biomedical Engineering"
+  "Former Division I Player",
+  "PhD Candidate"
+];
+
+const athleteExperience = [
+  "Major League players",
+  "All-Stars",
+  "Gold Glovers",
+  "College athletes",
+  "Amateurs"
 ];
 
 function CredentialChips() {
   return (
-    <div className="border-y border-stone/80 py-4">
+    <div className="border-t border-stone/80 pt-4">
       <p className="text-xs font-semibold uppercase tracking-[0.18em] text-teal">Background</p>
-      <div className="mt-3 flex flex-wrap gap-x-3 gap-y-2 text-sm font-semibold leading-6 text-charcoal/80">
-        {credentials.map((credential, index) => (
-          <span key={credential} className="inline-flex items-center gap-3">
-            {index > 0 && <span className="h-1 w-1 rounded-full bg-clay/70" aria-hidden="true" />}
-            {credential}
-          </span>
-        ))}
-      </div>
+      <p className="mt-2 text-sm font-semibold leading-6 text-charcoal/84">
+        {credentials.join(" · ")}
+      </p>
+      <p className="mt-3 text-xs font-semibold uppercase tracking-[0.18em] text-teal/75">Worked With</p>
+      <p className="mt-3 text-xs font-semibold leading-6 text-charcoal/55 sm:text-sm">
+        {athleteExperience.join(" · ")}
+      </p>
     </div>
   );
 }
@@ -66,7 +72,7 @@ export function HomeHero() {
             Baseball Biomechanics
           </h1>
           <p className="mt-5 max-w-xl text-lg leading-8 text-charcoal/78 sm:mt-7 sm:text-xl">
-            Pitching, hitting, mocap, training, and movement concepts from TJ Galenti.
+            Athletic performance, explained through biomechanics and applied data with TJ Galenti.
           </p>
           <div className="mt-7 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:flex-wrap">
             <Link
@@ -77,7 +83,7 @@ export function HomeHero() {
             </Link>
             <Link
               className="focus-ring inline-flex justify-center rounded-full border border-stone bg-ivory/70 px-6 py-3 text-sm font-semibold text-ink transition duration-200 hover:-translate-y-0.5 hover:border-clay hover:text-clay sm:justify-start"
-              href="/work-with-tj"
+              href="/connect"
             >
               Connect
             </Link>
@@ -176,7 +182,7 @@ export function AreasOfFocus() {
 
 export function HomeCta() {
   return (
-    <section id="work-with-tj" className="editorial-container py-16">
+    <section id="connect" className="editorial-container py-16">
       <div className="relative overflow-hidden rounded-[36px] border border-stone bg-navy p-8 text-ivory shadow-soft sm:p-10 lg:p-12">
         <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
           <div>
@@ -189,7 +195,7 @@ export function HomeCta() {
             </p>
           </div>
           <Link
-            href="/work-with-tj"
+            href="/connect"
             className="focus-ring inline-flex rounded-full bg-ivory px-6 py-3 text-sm font-semibold text-ink transition duration-200 hover:-translate-y-0.5 hover:bg-clay hover:text-ivory"
           >
             Connect

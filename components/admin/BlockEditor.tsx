@@ -78,7 +78,7 @@ export function createEmptyBlock(type: ArticleBlock["type"]): ArticleBlock {
     case "biomech_note":
       return { id, type, title: "Biomech note", body: "Add expert commentary." };
     case "cta_box":
-      return { id, type, title: "Work with TJ", body: "Add CTA copy.", href: "/work-with-tj", label: "Start the conversation" };
+      return { id, type, title: "Connect", body: "Add CTA copy.", href: "/connect", label: "Start the conversation" };
     case "references":
       return { id, type, items: [{ label: "Source title", url: "https://example.com" }] };
   }

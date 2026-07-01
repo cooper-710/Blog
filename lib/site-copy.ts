@@ -1,21 +1,21 @@
 export const SERVICE_TOPICS_LINE =
-  "Baseball · Biomechanics · Mocap · Analytics · Pitching · Hitting · Training";
+  "Baseball · Biomechanics · Motion capture · Analytics · Pitching · Hitting · Training";
 
 export const SERVICE_FOCUS_TAGS = [
   "Pitching",
   "Hitting",
-  "Throwing",
   "Biomechanics",
-  "Mocap",
+  "Motion Capture",
   "Training",
-  "Team consulting"
+  "Organizations",
+  "Consulting"
 ] as const;
 
 export const SITE_NAV_ITEMS = [
   { label: "Home", href: "/" },
   { label: "Articles", href: "/articles" },
   { label: "About", href: "/about" },
-  { label: "Connect", href: "/work-with-tj" }
+  { label: "Connect", href: "/connect" }
 ] as const;
 
 export const SITE_CONTACT_EMAIL = "contact@sequencebiolab.com";
