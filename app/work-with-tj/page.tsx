@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { WorkInquiryForm } from "@/components/WorkInquiryForm";
-import { SERVICE_FOCUS_TAGS } from "@/lib/site-copy";
+import { SITE_CONTACT_LINKS, SERVICE_FOCUS_TAGS } from "@/lib/site-copy";
 
 export const metadata: Metadata = {
   title: "Work With TJ",
@@ -8,28 +8,10 @@ export const metadata: Metadata = {
     "Contact TJ Galenti for baseball performance, biomechanics, mocap, analytics, training, pitching, and hitting support."
 };
 
-const contactEmail = "contact@sequencebiolab.com";
-
-const contactLinks = [
-  {
-    label: "Email",
-    value: contactEmail,
-    href: `mailto:${contactEmail}`,
-    icon: "email"
-  },
-  {
-    label: "LinkedIn",
-    value: "TJ Galenti",
-    href: "https://www.linkedin.com/in/t-j-galenti/",
-    icon: "linkedin"
-  },
-  {
-    label: "Instagram",
-    value: "@sequencebiolab",
-    href: "https://www.instagram.com/sequencebiolab/",
-    icon: "instagram"
-  }
-];
+const contactLinks = SITE_CONTACT_LINKS.map((link) => ({
+  ...link,
+  icon: link.label.toLowerCase()
+}));
 
 const focusAreas = [...SERVICE_FOCUS_TAGS];
 

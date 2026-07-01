@@ -1,8 +1,7 @@
 "use client";
 
 import { FormEvent, useMemo, useState } from "react";
-
-const contactEmail = "contact@sequencebiolab.com";
+import { SITE_CONTACT_EMAIL } from "@/lib/site-copy";
 
 const initialValues = {
   name: "",
@@ -42,7 +41,7 @@ export function WorkInquiryForm() {
   const mailtoHref = useMemo(() => {
     const subjectName = values.name.trim() || "New Inquiry";
     const subject = `Work With TJ inquiry from ${subjectName}`;
-    return `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(formatBody(values))}`;
+    return `mailto:${SITE_CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(formatBody(values))}`;
   }, [values]);
 
   function updateField(field: keyof FormValues, value: string) {

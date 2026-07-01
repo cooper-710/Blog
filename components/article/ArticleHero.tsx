@@ -66,7 +66,7 @@ export function ArticleHero({
         </div>
 
         <div
-          className={`relative ${viewport === "mobile" ? "min-h-[220px]" : viewport === "tablet" ? "min-h-[280px]" : "min-h-[340px]"}`}
+          className={`relative overflow-hidden rounded-[24px] border border-stone ${viewport === "mobile" ? "min-h-[220px]" : viewport === "tablet" ? "min-h-[280px]" : "min-h-[340px]"}`}
         >
           {article.hero_image_url ? (
             <Image
@@ -75,7 +75,7 @@ export function ArticleHero({
               fill
               priority
               sizes="(min-width: 1024px) 45vw, 100vw"
-              className="border border-stone object-cover"
+              className="object-cover"
             />
           ) : (
             <TechnicalVisual label="Article visual" />

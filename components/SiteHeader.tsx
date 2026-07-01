@@ -1,11 +1,5 @@
 import Link from "next/link";
-
-const navItems = [
-  { label: "Home", href: "/" },
-  { label: "Articles", href: "/articles" },
-  { label: "About", href: "/about" },
-  { label: "Connect", href: "/work-with-tj" }
-];
+import { SITE_NAV_ITEMS } from "@/lib/site-copy";
 
 export function SiteHeader() {
   return (
@@ -19,7 +13,7 @@ export function SiteHeader() {
         </Link>
 
         <nav aria-label="Primary navigation" className="flex items-center gap-0.5 sm:gap-2">
-          {navItems.map((item) => (
+          {SITE_NAV_ITEMS.map((item) => (
             <Link
               key={item.href}
               href={item.href}
